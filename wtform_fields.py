@@ -29,7 +29,6 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField('confirm_password_label',
                                      validators=[InputRequired(message="Password Required"),
                                                  EqualTo('password', message="Passwords must match")])
-    submit_button = SubmitField('Submit')
 
     # checks if the user exists
     def validate_username(self, username):
@@ -45,4 +44,3 @@ class LoginForm(FlaskForm):
                            validators=[InputRequired(message="Username Required")])
     password = PasswordField('password_label',
                              validators=[InputRequired(message="Password Required"), invalid_credentials])
-    submit_button = SubmitField('Login')

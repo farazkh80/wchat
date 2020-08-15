@@ -80,12 +80,23 @@ def logout():
     flash('You have logged out successfully', 'success')
     return redirect(url_for('login'))
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
 
 # event buckets
-@socketio.on('message')
-def message(data):
-    print(f"\n\n{data}\n\n")
-    send({'msg': data['msg'], 'username': data['username'], 'time_stamp': strftime('%b-%d %I:%M%p', localtime())}, room=data['room'])
+@socketio.on('incoming-msg')
+def on_message(data):
+    """Broadcast messages"""
+
+    msg = data["msg"]
+    username = data["username"]
+    room = data["room"]
+    # Set timestamp
+    time_stamp = strftime('%b-%d %I:%M%p', localtime())
+    send({"username": username, "msg": msg, "time_stamp": time_stamp}, room=room)
 
 
 # Join the room

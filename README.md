@@ -57,13 +57,13 @@ $ python application.py
 
 Registration Page
 
-![Registration Page](reg-page.png)
+![Registration Page](https://github.com/farazkh80/wchat/blob/master/visuals/reg-page.PNG)
 
 Login Page
 
-![Login Page](login-page.png)
+![Login Page](https://github.com/farazkh80/wchat/blob/master/visuals/login-page.PNG)
 
 Chat Room
 
-![Chat Room](chat-room.png)
+![Chat Room](https://github.com/farazkh80/wchat/blob/master/visuals/chat-room.PNG)
 

@@ -7,12 +7,14 @@ from wtform_fields import *
 from models import *
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET")
+# actual secret key if running on a local system => "b'0\x17\xdb\x03\xdc\x0c;ja\xecv\xb0a\xe9$\x13'"
+app.secret_key = app.secret_key = os.environ.get("SECRET")
+
 
 # configure database
+# Actual Database url if running on a local system => "postgres://xwawslekazwoni:ba0ee8e746269e7cc8ff5804aa28c3205e0309757bb2673ffad22d793bb13b92@ec2-34-225-162-157.compute-1.amazonaws.com:5432/dcqg3bakntjhp"
 app.config[
     'SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-
 db = SQLAlchemy(app)
 
 # Initialize Flask-SocketIO
@@ -117,4 +119,5 @@ def leave(data):
 
 
 if __name__ == "__main__":
+    # remove the code below and use "socketio.run(app, debug=True)" if running on a local system
     app.run()

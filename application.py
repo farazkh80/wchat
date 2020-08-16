@@ -1,3 +1,4 @@
+import os
 from time import localtime, strftime
 from flask import Flask, render_template, redirect, url_for, flash
 from flask_login import LoginManager, login_user, current_user, logout_user
@@ -6,11 +7,11 @@ from wtform_fields import *
 from models import *
 
 app = Flask(__name__)
-app.secret_key = 'replace later'
+app.secret_key = os.environ.get("SECRET")
 
 # configure database
 app.config[
-    'SQLALCHEMY_DATABASE_URI'] = 'postgres://xwawslekazwoni:ba0ee8e746269e7cc8ff5804aa28c3205e0309757bb2673ffad22d793bb13b92@ec2-34-225-162-157.compute-1.amazonaws.com:5432/dcqg3bakntjhp'
+    'SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 
 db = SQLAlchemy(app)
 
@@ -103,7 +104,7 @@ def on_message(data):
 @socketio.on('join')
 def join(data):
     join_room(data['room'])
-    send({'msg': data['username'] + " has joined the " +
+    send({'msg': data['username'] + " is online in " +
                  data['room'] + " room."}, room=data['room'])
 
 
@@ -111,9 +112,9 @@ def join(data):
 @socketio.on('leave')
 def leave(data):
     leave_room(data['room'])
-    send({'msg': data['username'] + " has left the " +
+    send({'msg': data['username'] + " is offline of  " +
                  data['room'] + " room."}, room=data['room'])
 
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    app.run()

@@ -25,12 +25,12 @@
         <div class="wrapper">
 
             <!-- Nav bar start -->
-            <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #39d41e">
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: darkslategray">
 
                 <div class="container-fluid">
                     <div id="show-sidebar-button" class="cursor-pointer">
                         <i class="fas fa-plus-circle "></i>
-                        <span>Rooms</span>
+                        <span style="color: #ffffff">Rooms</span>
                     </div>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
 
                 <!-- Sidebar start -->
                 <nav id="sidebar">
-                    <h4 style="color:#e7f1f1">Rooms</h4>
+                    <h4 style="color:#ffffff">Rooms</h4>
                     {% for room in rooms %}
                         <p id="{{ room|title }}" class="select-room cursor-pointer">{{ room|title }}</p>
                     {% endfor %}

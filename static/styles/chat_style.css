@@ -95,7 +95,7 @@ input[type=text]:focus{
     border-color: grey;
     border-width: 0.5px;
     border-style: solid;
-    background-color: #81f5d3;
+    background-color: greenyellow;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -108,7 +108,7 @@ input[type=text]:focus{
     margin-right:1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    background-color: gray;
+    background-color: darkgray;
     border-color: whitesmoke;
     border-width: 2px;
     border-style: solid;
@@ -128,7 +128,7 @@ input[type=text]:focus{
 }
 
 .timestamp {
-    color: #d78dc8;
+    color: #837c02;
     font-size:0.7em;
 }
 
@@ -141,7 +141,7 @@ input[type=text]:focus{
 .my-username {
     font-weight: bold;
     font-size: 1.1em;
-    color: #1346ff;
+    color: #fffdfd;
 }
 
 #msg-input {

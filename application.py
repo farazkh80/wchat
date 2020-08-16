@@ -16,7 +16,7 @@ db = SQLAlchemy(app)
 
 # Initialize Flask-SocketIO
 socketio = SocketIO(app)
-ROOMS = ["lounge", "news", "games", "coding"]
+ROOMS = ["Main", "General", "games", "coding"]
 
 # configure flask login
 login = LoginManager(app)

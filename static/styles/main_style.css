@@ -13,20 +13,6 @@ h1 {
     padding-bottom: 1em;
 }
 
-#image-section {
-    min-width: 30%;
-    max-width: 30%;
-    margin-right: 2em;
-    padding: 0 0 0 2em;
-    float: left;
-}
-
-img {
-    float: left;
-    max-width: 100%;
-    max-height: 480px;
-}
-
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -74,6 +60,6 @@ h2 {
 }
 
 input[type='text']:focus, input[type='password']:focus {
-    border-color: #ffc107;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #ffc107;
+    border-color: greenyellow;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #49ff07;
 }​

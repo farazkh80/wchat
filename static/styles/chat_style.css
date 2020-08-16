@@ -14,16 +14,18 @@
     padding-left: 1em;
     padding-top: 3em;
     padding-right:1em;
-    border-right: 0.5px solid #898c91;
+    border-right: 0.5px solid gray;
+    background-color: gray;
 }
 
 #sidebar p {
     padding-left: 2em;
     padding-right:2em;
+    color: #12469d;
 }
 
 #sidebar p:hover {
-    background-color: #ffc107;
+    background-color: #e7f1f1;
 }
 
 #sidebar h4 {padding-left: 0.5em;}
@@ -76,8 +78,8 @@
 }
 
 input[type=text]:focus{
-    border-color: #ffc107;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #ffc107;
+    border-color: #39d41e;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #0fff07;
 }
 
 @keyframes fadeIn {
@@ -93,7 +95,7 @@ input[type=text]:focus{
     border-color: grey;
     border-width: 0.5px;
     border-style: solid;
-    background-color: #C2DBFB;
+    background-color: #81f5d3;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -106,8 +108,9 @@ input[type=text]:focus{
     margin-right:1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border-color: #206ED2;
-    border-width: 1px;
+    background-color: gray;
+    border-color: whitesmoke;
+    border-width: 2px;
     border-style: solid;
     /* animation */
     animation-name: fadeIn;
@@ -120,25 +123,25 @@ input[type=text]:focus{
     margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
-    color: #656d78;
+    color: #4e7181;
     font-size:0.9em;
 }
 
 .timestamp {
-    color: #656d78;
+    color: #d78dc8;
     font-size:0.7em;
 }
 
 .other-username {
     font-weight: bold;
     font-size: 1.1em;
-    color: #206ED2;
+    color: floralwhite;
 }
 
 .my-username {
     font-weight: bold;
     font-size: 1.1em;
-    color: #FF6B13;
+    color: #1346ff;
 }
 
 #msg-input {

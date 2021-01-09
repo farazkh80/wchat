@@ -1,10 +1,13 @@
-#  WCHAT
+# WCHAT
+WChat is a multi-socket group chat app, developed with <b>Python's Flask</b> framework and modules on the backend as well as pure <b>JavaScript</b>  and a responsive <b>Bootstrap</b> design on the frontend.
+
 
 ## Link to heroku live app
 
 https://rchat-app80.herokuapp.com/
 
-## How to run on a local system
+
+## Configuration
  
 First navigate through the terminal to this projects folder
 and enter the following command
@@ -20,17 +23,29 @@ Make sure that you have install virtual environment, if not use the following co
 ```
 $ pip3 install virtualenv
 ```
-On your project folder enter the following commands in order to activate you venv.
-```
-$ virtualenv env
+On your project folder enter the following commands in order to create a virtual environment.
+
+```bash
+virtualenv venv
 ```
 
+Next, activate your virtual environment using the following command.
+
+```bash
+vev/Scripts/activate
 ```
-$ \path\to\env\Scripts\activate
+
+Install the requirements using the following command.
+
+```bash
+pip install -r requirements.txt
 ```
+
 Make a few adjustment on the code at application.py file:
 
 1- Change the database secret key and url according to their comments above of them (can be found from line 10 to 17 on application.py)
+
+
 ```python
 # actual secret key if running on a local system => "b'0\x17\xdb\x03\xdc\x0c;ja\xecv\xb0a\xe9$\x13'"
 app.secret_key = app.secret_key = os.environ.get("SECRET")
@@ -48,22 +63,47 @@ app.config[
 app.run()
 ```
 
-Finally to run your project enter the following command.
+## Running
+
+To run your project enter the following command.
+
 ```
-$ python application.py
+python application.py
 ```
 
-## Some Visuals from WCHAT app platform
 
-Registration Page
+You will be directed to a registration page first.
 
-![Registration Page](https://github.com/farazkh80/wchat/blob/master/visuals/reg-page.PNG)
+![Registration Page](/visuals/reg-page.PNG)
 
-Login Page
 
-![Login Page](https://github.com/farazkh80/wchat/blob/master/visuals/login-page.PNG)
+After completing the registration you will be required to login with your credentials.
 
-Chat Room
+![Login Page](/visuals/login-page.PNG)
 
-![Chat Room](https://github.com/farazkh80/wchat/blob/master/visuals/chat-room.PNG)
+
+Upon logging in, you will be able to use different chat rooms to talk with the online users.
+
+![Chat Room](/visuals/chat-room.PNG)
+
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+
+
+## Future Improvements
+
+1- The main future goal is to connect WChat to a MongoDB database in order save previous messages.
+
+2- Another possible feature is offering users a way to connect with other users through unique username search. 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
 
